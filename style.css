@@ -1,0 +1,217 @@
+*{
+    margin:0px 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(205 135 201 / 34%);
+}
+header{
+    position: fixed;
+    top:0;
+    left:0px;
+    width:100%;
+    z-index:99;
+    background-color: rgb(189, 114, 219);
+}
+.nav{
+    max-width: 1200px;
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    color:white;
+}
+.box{
+    color:white;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    position: relative;
+}
+.cart_count{
+    position: absolute;
+    background-color: rgb(62, 65, 65);
+    top: -10px;
+    left: 15px;
+    padding: -1px;
+    height: 17px;
+    width: 15px;
+    border-radius: 50%;
+    line-height: 20px;
+    font-size: 12px;
+    z-index: 99;
+}
+.bi-cart-fill{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding-top: 10px;
+}
+img{
+    width: 100%;
+}
+.container{
+    padding: 4rem;
+    margin: auto;
+    width:80%;
+    /* background-color: red; */
+    max-width: 1200px;
+
+}
+.food_item{
+    display: grid;
+    /* grid-template-columns: auto auto auto  */
+    grid-template-columns: repeat(auto-fit,minmax(200px, auto));
+    margin-top: 1rem;
+    gap: 20px; 
+    align-items: center;
+    justify-content: center;
+}
+.food_box{
+    background-color: #bd72db;
+    padding: 10px;
+    box-shadow: 0 1px 4px rgb(189, 114, 219);
+    border-color: 3px;
+    position: relative;
+}
+.food{
+    overflow: hidden;
+}
+.food:hover img{
+    transform: scale(1.5);
+}
+.food_img{
+    transition: 0.4s;
+    overflow: hidden;
+    /* automatic width and height */
+    aspect-ratio: 1/1;
+    /* .............. */
+    object-fit: cover;
+}
+.food_name{
+    color:white;
+    font-size: 1.2rem;
+}
+.food_price{
+    font-weight: 600;
+}
+.card{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color:#5d4183;
+    color: azure;
+    padding: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.card:hover{
+    background-color: rgb(48, 28, 28);
+}
+.displaycard{
+    position: fixed;
+    top:0;
+    right: -100%;
+    width:300px;
+    z-index:100;
+    height: 100vh;
+    background-color:rgb(189 114 219);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 20px;
+    box-shadow: 10px 1px 4px rgba(160 120 177,0.1);
+}
+
+.displaycard-active{
+    right:0;
+    transition: 0.5s;
+}
+.card_name{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 15px;
+}
+.dispalycard_box{
+    display: grid;
+    grid-template-columns: 35% 45% 20%;
+    align-items: center;
+    gap:10px;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-bottom: 10px;
+}
+.card_img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border: 2px solid rgb(62 9 59 / 34%);
+    padding: 5px;
+}
+.detailbox{
+    display: grid;
+    row-gap: 5px;
+}
+.price_box{
+    display: flex;
+    justify-content: space-between;
+}
+.dispalycard_name{
+    text-transform: capitalize;
+    color:rgb(221, 26, 52);
+    font-weight: 500;
+}
+.card_count{
+    border: 1px solid rgba(0,0,0,0.1);
+    outline:none;
+    width: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+.bi-trash-fill{
+    font-size:20px ;
+    color:rgb(221, 26, 52);
+    cursor: pointer;
+}
+.total{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+.total_title{
+    font-size: 16px;
+    font-weight: 600;
+}
+.total_price{
+    margin-left: 0.5rem;
+}
+.order_conform{
+    padding: 6px 20px;
+    background-color: #5d4183;
+    color: bisque;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;  
+    cursor: pointer;
+}
+/* .colse:hover{
+    color:rgb(221, 26, 52);
+} */
